@@ -20,3 +20,12 @@ class Library:
                 self.borrowed_books.append(book)
                 return True
         return False
+    
+    
+    def return_book(self, isbn):
+        for book in self.borrowed_books:
+            if book.isbn == isbn:
+                self.borrowed_books.remove(book)
+                self.books_available.append(book)
+                return True
+        return False
