@@ -29,3 +29,6 @@ class Library:
                 self.books_available.append(book)
                 return True
         return False
+    
+    def view_available_books(self):
+        return self.books_available
